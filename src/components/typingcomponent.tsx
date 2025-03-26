@@ -11,7 +11,6 @@ export default function TypingComponent() {
   const [startTime, setStartTime] = useState<number | null>(null);
   const [wpm, setWpm] = useState(0);
   const [accuracy, setAccuracy] = useState(100);
-  const [jsdata, setJsData] = useState("");
   const [isFinished, setIsFinished] = useState<boolean>(false);
 
   const words = sampleText.split("");
@@ -46,7 +45,7 @@ export default function TypingComponent() {
     if (input.length > sampleText.length) {
       setIsFinished(true);
     }
-  }, [input, startTime]);
+  }, [input, startTime, calculateStatsOfPlayer]);
 
 
   const render = () => {

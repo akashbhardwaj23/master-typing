@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Convergence&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&display=swap');
 
 @import "tailwindcss";
-@import "tw-animate-css";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -25,7 +25,7 @@
     --color-primary: {
       DEFAULT: var(--primary);
       foreground: var(--primary-foreground);
-    }
+    };
     --color-card: {
       DEFAULT: var(--card);
       foreground: var(--card-foreground);
@@ -35,7 +35,7 @@
 
 
 * {
-    @apply border-[#e5e7eb] dark:border-[#374151];
+    @apply border-border;
   }
 
   body {

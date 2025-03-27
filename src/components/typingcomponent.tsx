@@ -20,8 +20,8 @@ export default function TypingComponent() {
     if (!startTime) return;
 
     const timeInMinute = (Date.now() - startTime) / 60000;
-    console.log("Time in minutes is ", timeInMinute)
     const wordTyped = input.trim().split(" ").length;
+    // Should be total char in correctly typed word / 5 normalized to 60sec
     const wpm = Math.round(wordTyped / timeInMinute);
 
     const correctChar = input
